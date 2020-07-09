@@ -1,16 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+declare function init_plugins(); 
+// declaro la funcion del plugins en asset/ js/common
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'
-  ]
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( public router: Router ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    init_plugins();
+    
   }
 
+  ingresar() {
+
+    this.router.navigate([ '/dashboard' ]);
+
+  }
 }

@@ -14,6 +14,7 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 // temp
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
@@ -25,7 +26,8 @@ declarations: [
     ProgressComponent,
     Graficas1Component,
     IncrementadorComponent,
-    GraficoDonaComponent
+    GraficoDonaComponent,
+    AccountSettingsComponent
 ],
 exports: [
     DashboardComponent,

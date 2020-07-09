@@ -17,6 +17,12 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 
 
+// service module
+import { ServiceModule } from './services/service.module';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     Pagesmodule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
