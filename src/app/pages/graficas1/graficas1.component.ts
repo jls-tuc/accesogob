@@ -10,28 +10,28 @@ export class Graficas1Component implements OnInit {
 
   graficos: any = {
     grafico1: {
-      labels: ['Con Frijoles', 'Con Natilla', 'Con tocino'],
-      data:  [24, 30, 46],
+      labels: ['Sala de reuniones 1', 'Salas de reuniones 2', 'Oficina de Sistemas', 'Oficina de Administracion'],
+      data:  [24, 30, 46, 25],
       type: 'doughnut',
-      leyenda: 'El pan se come con'
+      leyenda: 'Espacios activos'
     },
     grafico2: {
-      labels: ['Hombres', 'Mujeres'],
-      data:  [4500, 6000],
+      labels: ['Visitantes', 'Empleados', 'Servicios Externos'],
+      data:  [45, 35, 45],
       type: 'doughnut',
-      leyenda: 'Entrevistados'
+      leyenda: 'Ingresos el dia de hoy'
     },
     grafico3: {
-      labels: ['Si', 'No'],
-      data:  [95, 5],
+      labels: ['Puerta A', 'Puerta B', 'Puerta C'],
+      data:  [30, 50, 45 ],
       type: 'doughnut',
-      leyenda: '¿Le dan gases los frijoles?'
+      leyenda: 'Ingresos por puertas habilitadas'
     },
     grafico4: {
-      labels: ['No', 'Si'],
-      data:  [85, 15],
+      labels: ['Ingresaron', 'Retiraron' , 'Permanecen en el edificio'],
+      data:  [125, 15, 115 ],
       type: 'doughnut',
-      leyenda: '¿Le importa que le den gases?'
+      leyenda: 'Personas en el edificio'
     },
   };
 
