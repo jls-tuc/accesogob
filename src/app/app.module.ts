@@ -14,11 +14,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 // temportal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // service module
 import { ServiceModule } from './services/service.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,7 +36,9 @@ import { ServiceModule } from './services/service.module';
     AppRoutingModule,
     Pagesmodule,
     FormsModule,
-    ServiceModule
+    ReactiveFormsModule,
+    ServiceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
