@@ -3,7 +3,7 @@ import { PAGES_ROUTES  } from './pages.routes';
 
 // Modulos
 import {SharedModule} from '../shared/shared.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 
 import { PagesComponent } from './pages.component';
@@ -17,6 +17,13 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '.././components/modal-upload/modal-upload.component';
+import { EdificiosComponent } from './edificios/edificios.component';
+import { RouterModule } from '@angular/router';
+import { PersonaComponent } from './persona/persona.component';
+import { PersonasComponent } from './persona/personas.component';
+
 
 
 
@@ -31,7 +38,12 @@ declarations: [
     IncrementadorComponent,
     GraficoDonaComponent,
     AccountSettingsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent,
+    EdificiosComponent,
+    PersonaComponent,
+    PersonasComponent
 ],
 exports: [
     DashboardComponent,
@@ -40,9 +52,11 @@ exports: [
 ],
 imports: [
    CommonModule,
-   SharedModule,
-   PAGES_ROUTES,
    FormsModule,
+   ReactiveFormsModule,
+   SharedModule,
+   RouterModule,
+   PAGES_ROUTES,
    ChartsModule,
    PipesModule
    ]

@@ -1,0 +1,87 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <input #input (keyup)="buscarEdificio( input.value )" type="text" class="form-control" placeholder="Buscar edificio...">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Edificios ({{ edificios.length }})</h4>
+                        <h6 class="card-subtitle">
+                            Edificios cargados en el sistema
+                        </h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="text-right">
+                            <a class="btn btn-primary" routerLink="/dashboard">
+                                <i class="fa fa-hospital-o"></i> Agregar Edificio
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="w100">Foto</th>
+                                <th>Nombre</th>
+                                <th>Localidad</th>
+                                <th>Direccion</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let edificio of edificios">
+                                <td class="text-center">
+                                    <img [src]="edificio.img | imagen:'edificio'" class="img-50 img-circle pointer">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="edificio.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre del Edificio">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="edificio.localidad" name="nombre" type="text" class="form-control" placeholder="Localidad">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="edificio.direccion" name="nombre" type="text" class="form-control" placeholder="Direccion">
+                                </td>
+                                <td class="text-center">
+                                    <button (click)="guardarEdificio( edificio )" class="btn btn-primary">
+                                        <i class="fa fa-save"></i>
+                                      </button>
+
+                                    <button (click)="borrarEdificio( edificio )" class="btn btn-danger">
+                                          <i class="fa fa-trash-o"></i>
+                                        </button>
+
+                                </td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-secondary">Anteriores</button> &nbsp;
+                <button class="btn btn-secondary">Siguientes</button>
+
+            </div>
+        </div>
+    </div>
+</div>

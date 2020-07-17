@@ -1,0 +1,96 @@
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input type="text" class="form-control" placeholder="Buscar persona..." />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+
+        <div class="alert alert-info text-center">
+            <h4 class="alert-heading">Cargando</h4>
+            <i class="fa fa-spin fa-refresh fa-2x"></i>
+            <p class="mb-0">Por favor espere</p>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Personas </h4>
+                        <h6 class="card-subtitle">
+                            Personas existenes en el sistema
+                        </h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="text-right">
+                            <a class="btn btn-primary" routerLinkActive="active" routerLink="/persona/nuevo">
+                                <i class="fa fa-hospital-o"></i> Agregar una persona
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Documento</th>
+                                <th class="text-nowrap">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let persona of persona">
+                                <td class="text-center">
+                                    <img id="foto" src={{persona.img}} class="img-50 img-circle pointer">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="persona.apellido" name="nombre" type="text" class="form-control" placeholder="Apellido">
+                                </td>
+                                <td class="text-center">
+                                    <input [(ngModel)]="persona.documento" name="nombre" type="text" class="form-control" placeholder="Numero de Documento">
+                                </td>
+                                <td class="text-center">
+                                    <button (click)="guardarPersona( persona )" class="btn btn-primary">
+                                        <i class="fa fa-save"></i>
+                                      </button>
+
+                                    <button (click)="borrarPersonas( persona )" class="btn btn-danger">
+                                          <i class="fa fa-trash-o"></i>
+                                        </button>
+
+                                </td>
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-secondary">Anteriores</button> &nbsp;
+                <button class="btn btn-secondary">Siguientes</button>
+
+            </div>
+        </div>
+    </div>
+</div>
